@@ -41,10 +41,11 @@ const resp = await fetch(`https://blogwebsite-production-3f31.up.railway.app/api
         const data = await resp.json()
         const comments = JSON.stringify(data)
          localStorage.setItem('comments', comments)
-         window.location.href= `./mainpost.html?postid=${postid}`;
+  
     }
 }
 fetcsh()
+       window.location.href= `./mainpost.html?postid=${postid}`;
 comm.addEventListener('click', async (e)=>{
       e.preventDefault();
     
