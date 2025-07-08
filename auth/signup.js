@@ -11,7 +11,7 @@ const username = document.querySelector('#username').value
           if (confirmpassword !== password) {
    return alert('password Does not Match')  }
    const body = {username, email, password}
-const response = await fetch('http://localhost:4000/auth/signup', {method: "POST", body: JSON.stringify(body), headers: {"Content-Type": "application/json"}})
+const response = await fetch('https://blogwebsite-production-3f31.up.railway.app/auth/signup', {method: "POST", body: JSON.stringify(body), headers: {"Content-Type": "application/json"}})
 if (response.ok) {
     alert("signup Successful")
     window.location.href= '../index.html'

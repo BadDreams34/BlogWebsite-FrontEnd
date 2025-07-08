@@ -8,7 +8,7 @@ save.addEventListener('click', async (e)=>{
     if (!title || !post) {
         return alert("Please Fill all Fields")
     }
-    const response = await fetch('http://localhost:4000/api/posts', {
+    const response = await fetch('https://blogwebsite-production-3f31.up.railway.app/api/posts', {
         method: "POST", headers: {"Content-Type": "application/json", "Authorization": `Bearer ${localStorage.getItem('token')}`}, body: JSON.stringify(json)
     } )
     if (response.ok) {

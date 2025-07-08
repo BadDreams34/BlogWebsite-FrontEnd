@@ -8,7 +8,7 @@ const email = document.querySelector('#email').value
 const password = document.querySelector('#password').value
 console.log('it should be shown')
    const body = {email, password}
-const response = await fetch('http://localhost:4000/auth/login', {method: "POST", body: JSON.stringify(body), headers: {"Content-Type": "application/json"}})
+const response = await fetch('https://blogwebsite-production-3f31.up.railway.app/auth/login', {method: "POST", body: JSON.stringify(body), headers: {"Content-Type": "application/json"}})
 console.log(response)
 if (response.ok) {
     try {
