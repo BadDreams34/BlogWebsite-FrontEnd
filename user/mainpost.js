@@ -44,8 +44,32 @@ const resp = await fetch(`https://blogwebsite-production-3f31.up.railway.app/api
   
     }
 }
-fetcsh()
-       window.location.href= `./mainpost.html?postid=${postid}`;
+fetcsh().then(()=>{
+    console.log("fetched comments")
+    const c = localStorage.getItem('comments')
+const cc= JSON.parse(c)
+  
+const ccc = cc.filter((comm)=>{
+    return comm.PostId === postid})
+
+
+const cos = document.querySelector('.comments')
+
+for (let ca of ccc) {
+    const ite = document.createElement('h3')
+    const user = document.createElement('p')
+    user.classList.add('user')
+    ite.classList.add('item')
+    const l = document.createElement('li')
+    user.textContent = `by ${ca.username}`
+    ite.textContent = ca.comment
+    cos.appendChild(l)
+    l.appendChild(ite)
+    l.appendChild(user)
+}
+
+})
+ 
 comm.addEventListener('click', async (e)=>{
       e.preventDefault();
     
@@ -77,24 +101,3 @@ comm.addEventListener('click', async (e)=>{
 
 
 
-const c = localStorage.getItem('comments')
-const cc= JSON.parse(c)
-  
-const ccc = cc.filter((comm)=>{
-    return comm.PostId === postid})
-
-
-const cos = document.querySelector('.comments')
-
-for (let ca of ccc) {
-    const ite = document.createElement('h3')
-    const user = document.createElement('p')
-    user.classList.add('user')
-    ite.classList.add('item')
-    const l = document.createElement('li')
-    user.textContent = `by ${ca.username}`
-    ite.textContent = ca.comment
-    cos.appendChild(l)
-    l.appendChild(ite)
-    l.appendChild(user)
-}
