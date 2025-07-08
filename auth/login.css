@@ -1,0 +1,77 @@
+#top {
+    color:blue;
+    display: flex;
+}
+
+h2 {
+    color: grey;
+    font-size:40px;
+    font-family: monospace;
+    margin:70px 0px;
+}
+
+img {
+    display:block;
+    height: 60px;
+    width: 60px;
+    align-self:center
+}
+
+
+p {
+    font-size:30px;
+    font-weight: 100;
+    font-family: monospace;
+    margin-left:15px;
+}
+.form {
+    display:flex;
+    margin-left: 15px;
+    flex-direction:column;
+    gap: 10px;
+}
+#email {
+    width: 250px;
+    height: 30px;
+    font-family: monospace;
+}
+
+#password {
+    width: 250px;
+    height: 30px;
+    font-family: monospace;
+}
+
+#confirmpass {
+    width: 250px;
+    height: 30px;
+    font-family: monospace;
+}
+#username {
+    width: 250px;
+    height: 30px;
+    font-family: monospace;
+}
+
+
+
+button {
+    width: 250px;
+    height: 30px;
+    color:grey;
+    font-family: monospace;
+}
+
+
+a {
+    width: 250px;
+    height: 30px;
+    color:grey;
+    font-family: monospace;
+    color: grey;
+    align-self:center;
+    margin-left:auto;
+    font-family: monospace;
+    
+
+}

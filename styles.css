@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#top {
+    color:blue;
+    display: flex;
+
+}
+h2 {
+    color: grey;
+    font-size:40px;
+    font-family: monospace;
+    margin:70px 0px;
+}
+img {
+    display:block;
+    height: 60px;
+    width: 60px;
+    align-self:center
+}
+p {
+    font-size:20px;
+    font-weight: 100;
+    font-family: monospace;
+    margin-left:15px
+
+}
+
+.auth {
+    margin-top: 10px;
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+}
+
+.auth button{
+    width: 200px;
+    height: 50px;
+    margin-left: 15px;
+    font-family: monospace;
+    font-size: 15px;
+}
