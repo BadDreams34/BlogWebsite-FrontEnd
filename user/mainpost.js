@@ -34,7 +34,7 @@ for (let post of postsss) {
 const comm = document.querySelector('#save')
 
 async function fetcsh() {
-const resp = await fetch(`https://blogwebsite-production-3f31.up.railway.app/api/${postid}/comment`, {
+const resp = await fetch(`${process.env.BASEURL}/api/${postid}/comment`, {
         method: "GET", headers: {"Content-Type": "application/json", "Authorization": `Bearer ${localStorage.getItem('token')}`}
     } )
     if (resp.ok) {
@@ -80,7 +80,7 @@ comm.addEventListener('click', async (e)=>{
     if (!comment) {
         return alert("Please Fill all Fields")
     }
-    const response = await fetch(`https://blogwebsite-production-3f31.up.railway.app/api/${postid}/comment`, {
+    const response = await fetch(`${process.env.BASEURL}/api/${postid}/comment`, {
         method: "POST", headers: {"Content-Type": "application/json", "Authorization": `Bearer ${localStorage.getItem('token')}`}, body: JSON.stringify(json)
     } )
     if (response.ok) {
